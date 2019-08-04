@@ -1,0 +1,3 @@
+# LaTeX Templates
+
+default.tex

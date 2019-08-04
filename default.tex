@@ -1,0 +1,117 @@
+% Template by Will Mitchell, DU CompSci 2018
+% Extended by James Roan, 2018 (added more unit alaises).
+% 30-Oct-18: Added line spacing to Page Layout section
+% May-18: Added bibliography formatting including lmodern and listings
+% 6-Feb-19: Added enumerate, multicol pkg
+
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{lmodern}  % for bold teletype font
+% load textcomp before gensymb to soothe weird errors
+\usepackage{textcomp,gensymb}
+\usepackage[round,authoryear]{natbib}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{listings} % used to display code
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  %postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+\usepackage{wrapfig}
+
+%######################################
+% Various shortcuts
+% Sets
+\providecommand{\C}{\ensuremath{\mathbb{C}}} % complex
+\providecommand{\N}{\ensuremath{\mathbb{N}}} % natural
+\providecommand{\Q}{\ensuremath{\mathbb{Q}}} % rationals
+\providecommand{\R}{\ensuremath{\mathbb{R}}} % reals
+\providecommand{\Z}{\ensuremath{\mathbb{Z}}} % integers
+\providecommand{\Zpos}{\ensuremath{\mathbb{Z}^{+}}} % positive integers
+
+% Logic Operators
+% \land, \lor, and \lnot already defined, add \lxor
+\providecommand{\lxor}{\ensuremath{\oplus}}
+
+% Set Theory
+\providecommand{\intersect}{\ensuremath{\bigcap}}
+\providecommand{\union}{\ensuremath{\bigcup}}
+
+% Miscellaneous
+% These are used as in \abs{x} to typeset the absolute value of x
+\providecommand{\abs}[1]{\ensuremath{\left\lvert#1\right\rvert}}      % absolute value
+\providecommand{\card}[1]{\ensuremath{\left\lvert#1\right\rvert}}     % cardinality
+\providecommand{\ceil}[1]{\ensuremath{\left\lceil#1\right\rceil}}     % ceiling
+\providecommand{\floor}[1]{\ensuremath{\left\lfloor#1\right\rfloor}}  % floor
+
+% Simplfied Symbols
+\providecommand{\emf}{\ensuremath{\mathcal{E}}}  %emf
+\providecommand{\deg}{\ensuremath{\degree}}
+
+% Units
+\providecommand{\degC}{\ensuremath{\degree\text{C}}}
+
+\providecommand{\volts}{\ensuremath{\,\text{V}}}
+\providecommand{\mV}{\ensuremath{\,\text{mV}}}
+
+\providecommand{\uA}{\ensuremath{\,\mu\text{A}}}
+
+\providecommand{\kOhm}{\ensuremath{\text{k}\Omega}}
+
+\providecommand{\Hz}{\ensuremath{\text{Hz}}}
+\providecommand{\kHz}{\ensuremath{\text{kHz}}}
+
+\providecommand{\uF}{\ensuremath{\mu\text{F}}}
+\providecommand{\nF}{\ensuremath{\text{nF}}}
+
+\providecommand{\intskip}{\ensuremath{\,\,}}
+
+%######################################
+%######################################
+%Page layout
+% If using hyperef, load it before this block
+\usepackage[paper=letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=30pt,headsep=30pt,footskip=30pt]{geometry}
+% Note 1in = 72pt, therefore bmargin=42pt is 1in - 30pt
+\usepackage{ifpdf}
+\ifpdf
+  \geometry{driver=pdftex}
+\else
+  \geometry{driver=dvips}
+\fi
+
+\usepackage{fancyhdr}
+% Line Spacing
+\usepackage{setspace}
+\onehalfspacing
+% Indent size
+\setlength{\parindent}{15pt} % Default is 15pt.
+%\usepackage{indentfirst}
+% bib format
+\bibliographystyle{humannat}
+
+% HEADER AND FOOTER STUFF
+\lhead{\large Name}
+\chead{\large Title}
+\rhead{\large Date}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%######################################
+
+\begin{document}
+\pagestyle{fancy}
+
+Document Starts Here
+
+\end{document}
